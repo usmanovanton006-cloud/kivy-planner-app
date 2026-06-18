@@ -13,7 +13,9 @@ jobs:
           python-version: '3.11'
 
       - name: Install Buildozer
-        run: pip install buildozer
+        run: |
+          pip install --upgrade pip
+          pip install buildozer
 
       - name: Create buildozer.spec
         run: |
@@ -36,6 +38,7 @@ jobs:
           android.ndk_api = 21
           android.permissions = INTERNET,POST_NOTIFICATIONS,VIBRATE
           android.accept_sdk_license = True
+          android.arch = arm64-v8a
 
           [buildozer]
           log_level = 2
