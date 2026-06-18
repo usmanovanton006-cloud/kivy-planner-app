@@ -10,7 +10,7 @@ jobs:
       - name: Build APK with Buildozer
         uses: digreatbrian/buildozer-action@v2
         with:
-          python-version: 3.11
+          python-version: 3.9
           buildozer-cmd: buildozer -v android debug
           buildozer-spec-path: buildozer.spec
 
