@@ -1,13 +1,9 @@
 name: Build APK
-
-on:
-  push:
-  workflow_dispatch:
+on: [push, workflow_dispatch]
 
 jobs:
   build:
     runs-on: ubuntu-22.04
-
     steps:
       - uses: actions/checkout@v3
 
@@ -33,10 +29,10 @@ requirements = python3,kivy==2.1.0,kivymd==1.0.2
 orientation = portrait
 presplash.filename = logo.png
 icon.filename = logo.png
-android.api = 30
+android.api = 33
 android.minapi = 21
-android.ndk = 23b
-android.sdk = 30
+android.ndk = 25c
+android.sdk = 33
 android.ndk_api = 21
 android.permissions = INTERNET,POST_NOTIFICATIONS,VIBRATE
 android.accept_sdk_license = True
