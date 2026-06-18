@@ -18,28 +18,28 @@ jobs:
       - name: Create buildozer.spec
         run: |
           cat > buildozer.spec << 'EOF'
-[app]
-title = TaskPlanner
-package.name = plannerapp
-package.domain = org.example
-source.dir = .
-source.include_exts = py,png,jpg,kv
-version = 1.0.0
-requirements = python3,kivy==2.1.0,kivymd==1.0.2
-orientation = portrait
-presplash.filename = logo.png
-icon.filename = logo.png
-android.api = 33
-android.minapi = 21
-android.ndk = 25c
-android.sdk = 33
-android.ndk_api = 21
-android.permissions = INTERNET,POST_NOTIFICATIONS,VIBRATE
-android.accept_sdk_license = True
+          [app]
+          title = TaskPlanner
+          package.name = plannerapp
+          package.domain = org.example
+          source.dir = .
+          source.include_exts = py,png,jpg,kv
+          version = 1.0.0
+          requirements = python3,kivy==2.1.0,kivymd==1.0.2
+          orientation = portrait
+          presplash.filename = logo.png
+          icon.filename = logo.png
+          android.api = 33
+          android.minapi = 21
+          android.ndk = 25c
+          android.sdk = 33
+          android.ndk_api = 21
+          android.permissions = INTERNET,POST_NOTIFICATIONS,VIBRATE
+          android.accept_sdk_license = True
 
-[buildozer]
-log_level = 2
-EOF
+          [buildozer]
+          log_level = 2
+          EOF
 
       - name: Build APK
         run: buildozer -v android debug
