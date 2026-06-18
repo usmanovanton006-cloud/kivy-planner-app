@@ -5,7 +5,7 @@ package.domain = org.example
 source.dir = .
 source.include_exts = py,png,jpg,kv
 version = 1.0.0
-requirements = python3,kivy==2.1.0,kivymd==1.0.2,pyjnius==1.5.0
+requirements = python3,kivy==2.1.0,kivymd==1.0.2,Cython==0.29.33
 orientation = portrait
 presplash.filename = logo.png
 icon.filename = logo.png
